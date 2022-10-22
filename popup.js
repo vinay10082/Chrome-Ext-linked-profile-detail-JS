@@ -1,21 +1,21 @@
-let optionList = document.getElementById('profile').options;
-let options = [
-    {
-        text: '...',
-        selected: true
-    },
-    {
-        text:'link 1'
-    },
-    {
-        text:'link 2'
-    },
-    {
-        text:'link 3'
-    }
-]
+const btn = document.querySelector('.btn');
 
-options.forEach(option =>
-    optionList.add(
-        new Option(option.text, option.selected)
-    ));
+btn.addEventListener('click', async() => {
+    const urls = ['https://www.linkedin.com/in/chetna-sharma-ab8880224',
+                  'https://www.linkedin.com/in/ritik-kundlas-66a466190',
+                  'https://www.linkedin.com/in/alekhgupta1441'
+                ];
+
+    for ( const url of urls) {
+        await new Promise((resolve) => {
+            chrome.tabs.update({url, active: true}, (tab) => {
+                chrome.tabs.onUpdated.addListener(function onUpdated(tabId, info){
+                    if (tabId === tab.id && info.status === 'complete') {
+                        chrome.tabs.onUpdated.removeListener(onUpdated);
+                        resolve();
+                    }
+                })
+            })
+        })
+    }
+})

@@ -5,12 +5,8 @@ body {
     width: 300px;
     text-align: center;
 }
-.select-profile {
-    width:200px;
-    margin-bottom: 5px;
-}
 .btn {
-    width: 100px;
+    width: 200px;
     background-color: rgb(237, 14, 62);
     outline: none;
     border: none;
