@@ -1,0 +1,21 @@
+body {
+    background: #f0d5ca;
+}
+.wrapper {
+    width: 300px;
+    text-align: center;
+}
+.select-profile {
+    width:200px;
+    margin-bottom: 5px;
+}
+.btn {
+    width: 100px;
+    background-color: rgb(237, 14, 62);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding:5px;
+    cursor: pointer;
+    color: #f1f5f9;
+}
