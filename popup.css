@@ -1,17 +1,14 @@
 body {
-    background: #f0d5ca;
+    background: #272121;
 }
 .wrapper {
-    width: 300px;
     text-align: center;
+    color:white;
+    font-weight: bold;
+    width: 300px;
+    border-style: solid;
+    border-color: white;
 }
 .btn {
-    width: 200px;
-    background-color: rgb(237, 14, 62);
-    outline: none;
-    border: none;
-    border-radius: 25px;
-    padding:5px;
     cursor: pointer;
-    color: #f1f5f9;
 }
